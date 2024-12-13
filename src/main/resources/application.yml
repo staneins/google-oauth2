@@ -1,0 +1,27 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            clientId: Ov23ligRL5Hdsfi19R2b
+            clientSecret: 80ffd8254e372b771cf26e4c38df2f79fad44291
+
+  logging:
+    level:
+      org.springframework.security: DEBUG
+
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: root
+    password: root
+    h2:
+      console:
+        enabled: true
+
+    sql:
+      init:
+        mode: always
+        schema-locations: classpath:schema.sql
+        data-locations: classpath:data.sql
